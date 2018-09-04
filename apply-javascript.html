@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Apply JavaScript example</title>
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+		  function createParagraph() {
+			var vic = document.createElement('p');
+			vic.textContent = 'Oh Victor thou art Loved!';
+			document.body.appendChild(vic);
+		  }
+
+		  var buttons = document.querySelectorAll('button');
+
+		  for(var i = 0; i < buttons.length ; i++) {
+			buttons[i].addEventListener('click', createParagraph);
+		  }
+		});
+	</script>
+  </head>
+  <body>
+    <button>Click me</button>
+	
+	<button>Click me</button>
+  </body>
+</html>
